@@ -28,74 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     
         
-        
-        // 1 创建一个naver的obserable 从来不执行
-        let neverO = Observable<String>.never()
-        neverO.subscribe { (event : Event<String>) in
-            print(event)
-        }.addDisposableTo(bag)
-        
-        
-        
-        // 2 创建一个empty的Obserable 只能发出一个complete事件
-        let empty = Observable<String>.empty()
-
-        empty.subscribe { (event : Event<String>) in
-            print(event)
-        }.addDisposableTo(bag)
-        
-        
-        
-        // 3 just 是创建一个sequence只能发出一种特定的事件 能正常结束
-        let just = Observable.just("10")
-        just.subscribe { (event : Event<String>) in
-            print(event)
-        }.addDisposableTo(bag)
-        
-        
-        // 4 of 创建一个sequence 能发出很多事件信号
-        let of = Observable.of("a","b","c")
-        of.subscribe { (event : Event<String>) in
-            print(event)
-        }.addDisposableTo(bag)
-        
-        
-        // 5 From 就是从数组中创建sequence
-        let from = Observable.from(["1","2","3"])
-        from.subscribe { (event : Event<String>) in
-            print(event)
-        }.addDisposableTo(bag)
-        
-        
-        // 6 create 创建一个自定义的disposable  实际开发中常用的  会在自定义很多事件来监听的
-        let create = createObserable()
-        create.subscribe { (event : Event<Any>) in
-            print(event)
-        }.addDisposableTo(bag)
-        
-        
-        //  自定义事件
-        let myJust = myJustObservable(element: "奥卡姆剃须刀")
-        
-        myJust.subscribe { (event : Event<String>) in
-            print(event)
-        }.addDisposableTo(bag)
-        
-        
-        // 7 range  这个作用不是很大
-        let range = Observable.range(start: 1, count: 10)
-        range.subscribe { (event : Event<Int>) in
-            print(event)
-        }.addDisposableTo(bag)
- 
-        // 8 重复
-        let repeatLL = Observable.repeatElement("奥卡姆剃须刀")
-        // 重复次数
-        repeatLL.take(5).subscribe { (event : Event<String>) in
-            print(event)
-        }.addDisposableTo(bag)
-        
-        
+        subjectPracticeDemo()
         
     }
     
@@ -103,7 +36,176 @@ class ViewController: UIViewController {
 
 
 
+
+
+
+
+
+
+
+
 extension ViewController{
+    
+    func subjectPracticeDemo() {
+        
+        
+        // 1 publishSubject 订阅者只能接受，订阅之后的事件 也就是必须先订阅 再发送事件
+        let publishSub = PublishSubject<String>()
+        
+        publishSub.subscribe { (event : Event<String>) in
+            print(event)
+        }.addDisposableTo(bag)
+        
+        publishSub.onNext("奥卡姆剃须刀")
+        
+        
+        // 2 ReplySubject 当你订阅ReplySubject 的时候，你可以接收到订阅他之后的事件，但也可以接收订阅他之前发出的事件 ，接收几个事件取决于bufferSize的大小  会接收最后发送的信号
+        
+//        let replySub  = ReplaySubject<String>.create(bufferSize: 2)
+        // 没有限制的replySubject
+        let replySub = ReplaySubject<String>.createUnbounded()
+        
+        replySub.onNext("1")
+        replySub.onNext("2")
+        replySub.onNext("3")
+        replySub.onNext("4")
+        
+        replySub.subscribe { (event : Event<String>) in
+            print(event)
+        }.addDisposableTo(bag)
+        
+        replySub.onNext("5")
+        
+        // 3 BehaviorSubject  当你订阅了BehaviorSubject  你就会接收到订阅之前的最后一个事件  可以初始化的时候就给一个订阅值
+        // 这个用的是最多的  一般用法是初始的时候给一个默认数据 然后进行刷新加载更多数据
+        let behaviorSub = BehaviorSubject(value: "10")
+        
+        behaviorSub.onNext("a")
+        // 只能订阅到 b
+        behaviorSub.onNext("b")
+        
+        behaviorSub.subscribe { (event : Event<String>) in
+            print(event)
+        }.addDisposableTo(bag)
+        
+        behaviorSub.onNext("11")
+        behaviorSub.onNext("12")
+        behaviorSub.onNext("13")
+        
+        
+        // 4 Variable 
+        // Variable 是BehaviorSubject 一个包装箱 就像是一个箱子一样 使用的时候需要调用asObservable() 拆箱，里面的Value 是一个BehaviorSubject  
+        //  如果 Variable 打算发出事件  直接修改对象的Value即可
+        
+        // 当事件结束的时候 Variable  会自动发出complete事件
+        
+        let variable = Variable("a")
+        
+        // 要是想修改值 直接修改value就好
+        variable.value = "b"
+        
+        variable.asObservable().subscribe { (event : Event<String>) in
+            print(event)
+        }.addDisposableTo(bag)
+        
+        // 也能发出事件
+        variable.value = "c"
+        variable.value = "d"
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    func practiceDemo() {
+        
+        // 1 创建一个naver的obserable 从来不执行
+        let neverO = Observable<String>.never()
+        neverO.subscribe { (event : Event<String>) in
+            print(event)
+            }.addDisposableTo(bag)
+        
+        
+        
+        // 2 创建一个empty的Obserable 只能发出一个complete事件
+        let empty = Observable<String>.empty()
+        
+        empty.subscribe { (event : Event<String>) in
+            print(event)
+            }.addDisposableTo(bag)
+        
+        
+        
+        // 3 just 是创建一个sequence只能发出一种特定的事件 能正常结束
+        let just = Observable.just("10")
+        just.subscribe { (event : Event<String>) in
+            print(event)
+            }.addDisposableTo(bag)
+        
+        
+        // 4 of 创建一个sequence 能发出很多事件信号
+        let of = Observable.of("a","b","c")
+        of.subscribe { (event : Event<String>) in
+            print(event)
+            }.addDisposableTo(bag)
+        
+        
+        // 5 From 就是从数组中创建sequence
+        let from = Observable.from(["1","2","3"])
+        from.subscribe { (event : Event<String>) in
+            print(event)
+            }.addDisposableTo(bag)
+        
+        
+        // 6 create 创建一个自定义的disposable  实际开发中常用的  会在自定义很多事件来监听的
+        let create = createObserable()
+        create.subscribe { (event : Event<Any>) in
+            print(event)
+            }.addDisposableTo(bag)
+        
+        
+        //  自定义事件
+        let myJust = myJustObservable(element: "奥卡姆剃须刀")
+        
+        myJust.subscribe { (event : Event<String>) in
+            print(event)
+            }.addDisposableTo(bag)
+        
+        
+        // 7 range  这个作用不是很大
+        let range = Observable.range(start: 1, count: 10)
+        range.subscribe { (event : Event<Int>) in
+            print(event)
+            }.addDisposableTo(bag)
+        
+        // 8 重复
+        let repeatLL = Observable.repeatElement("奥卡姆剃须刀")
+        // 重复次数
+        repeatLL.take(5).subscribe { (event : Event<String>) in
+            print(event)
+            }.addDisposableTo(bag)
+        
+    }
+    
+    
+    
+    
     
     func createObserable() -> Observable<Any> {
         
@@ -131,24 +233,12 @@ extension ViewController{
             
         })
         
-        
-    
     }
     
-    
-    
-    
-    
-    
-    
-
     @objc fileprivate   func getName() {
         print("123")
     }
-    
-    
-    
-    @objc fileprivate   func kvoDemo() {
+        @objc fileprivate   func kvoDemo() {
         
         //        4 KVO 传统的做法
         //        lbl.addObserver(self, forKeyPath: "text", options: .new, context: nil)
