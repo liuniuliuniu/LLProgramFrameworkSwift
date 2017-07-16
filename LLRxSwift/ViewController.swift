@@ -10,6 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+// RxSwift的思想  让任何一个变量都是可以监听的
+struct Student {
+    var score : Variable<Double>
+    
+}
+
 
 class ViewController: UIViewController {
     
@@ -21,30 +27,125 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scrollV: UIScrollView!
     
-    // 懒加载  为了消除RxSwift的警告
     fileprivate lazy var bag : DisposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         
-        subjectPracticeDemo()
+//        subjectPracticeDemo()
+        
+//        mapDemo()
+        
+//        disposeDemo()
         
     }
     
+    @IBAction func RxSwiftUITableView(_ sender: Any) {
+        
+       self.navigationController?.pushViewController(RxSwiftUITableViewVC(), animated: true)
+        
+    }
 }
 
 
 
-
-
-
-
-
-
-
-
 extension ViewController{
+    
+    
+        
+    
+    func disposeDemo() {
+        
+        // 1  dispose() 让对象立即销毁掉 后边在改变值的时候 此对象已经销毁了
+        let variable1 = Variable("奥卡姆剃须刀")
+        variable1.asObservable().subscribe { (event : Event<String>) in
+            print(event)
+        }.dispose()
+        
+        
+        // 2 DisposeBag
+        let subject = BehaviorSubject(value: "a")
+        subject.subscribe { (event : Event<String>) in
+            print(event)
+        }.addDisposableTo(bag)
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    func mapDemo() {
+        
+        
+        //  1 swift中map的使用
+        let array = [1,2,3,4]
+        
+        let arr2 = array.map { (num : Int) -> Int in
+            return num * num
+        }
+        
+        print(arr2)
+//         swift的函数式编程  用的还是比较少的 还是习惯于面向对象的方式
+        let arr3 = array.map({ $0 * $0 })
+        
+        print(arr3)
+        
+        //  2 rxswift 中map函数的使用
+        Observable.of(10,11,12,13)
+            .map { (num : Int) -> Int in
+                return num * num
+            }.subscribe { (event : Event<Int>) in
+                print(event)
+            }.addDisposableTo(bag)
+        
+        
+        
+        // 3 flatmap 的使用  映射 Observable的
+        let stu1 = Student(score: Variable(100))
+        let stu2 = Student(score: Variable(99))
+        let stu3 = Student(score: Variable(98))
+        
+        
+        //   链式编程思维
+        let studentVariable = Variable(stu1)
+        //  这个方法会把所有的是都监听到 都打印 但常常我们只关心最新的一个订阅
+//        studentVariable.asObservable().flatMap { (stu : Student) -> Observable<Double> in
+//            return stu.score.asObservable()
+//            }.subscribe { (event : Event<Double>) in
+//            print(event)
+//        }.addDisposableTo(bag)
+        
+        // 常用的是这一个方法  会先打印一下初始化的数据  只会关心最新订阅值的改变
+        studentVariable.asObservable().flatMapLatest { (stu : Student) -> Observable<Double> in
+            return stu.score.asObservable()
+            }.subscribe { (event : Event<Double>) in
+                print(event)
+            }.addDisposableTo(bag)
+        
+        studentVariable.value = stu2
+        stu2.score.value = 0
+        // 这样的话每一个值的改变都会发送信号
+        
+        //  我已经不关心你的 不订阅你了
+        stu1.score.value = 1000;
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     
     func subjectPracticeDemo() {
         
@@ -111,13 +212,6 @@ extension ViewController{
         // 也能发出事件
         variable.value = "c"
         variable.value = "d"
-        
-        
-        
-        
-        
-        
-        
         
     }
     
