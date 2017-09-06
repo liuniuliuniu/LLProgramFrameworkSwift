@@ -11,5 +11,5 @@ pod 'Kingfisher’, '~> 3.11.0'
 
 pod 'FMDB', '~> 2.7.2'
 
-pod 'SwiftyJSON'
+pod 'SwiftyJSON', '~> 3.1.4'
 end
