@@ -1,10 +1,15 @@
-platform :ios, '9.0'
+platform :ios, '8.0'
 
-target 'LLRxSwift' do
+target 'LLProgramFramework.Swift' do
 
   use_frameworks!
 
-pod 'RxSwift',    '~> 3.0'
-pod 'RxCocoa',    '~> 3.0'
+
+pod 'Alamofire', '~> 4.4'
+
+pod 'Kingfisher’, '~> 3.11.0'
+
+pod 'FMDB', '~> 2.7.2'
+
 
 end

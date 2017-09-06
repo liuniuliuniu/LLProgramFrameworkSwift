@@ -1,0 +1,18 @@
+{
+    "tabbar_items":[
+                    {
+                    "page":"LLHomeViewController",
+                    "type":"home",
+                    "title":"首页",
+                    "normal_icon":"home",
+                    "normal_icon_select":"home_select"
+                    },
+                    {
+                    "page":"LLMeViewController",
+                    "type":"me",
+                    "title":"我的",
+                    "normal_icon":"me_icon",
+                    "normal_icon_select":"me_icon_select"
+                    }
+                    ]
+}
