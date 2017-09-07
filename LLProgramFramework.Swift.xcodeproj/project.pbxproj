@@ -13,8 +13,11 @@
 		8C4AB2BD1F5EE4FB0082DC13 /* YTKKeyValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AB2BB1F5EE4FB0082DC13 /* YTKKeyValueStore.m */; };
 		8C4AB2C11F5EED9F0082DC13 /* LLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AB2C01F5EED9F0082DC13 /* LLHelper.swift */; };
 		8C4AB2C31F5EF06A0082DC13 /* Ext+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AB2C21F5EF06A0082DC13 /* Ext+String.swift */; };
-		8C4AB2C51F5EF1480082DC13 /* LLArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AB2C41F5EF1480082DC13 /* LLArrayDataSource.swift */; };
 		8C4AB2C71F5EF3E80082DC13 /* LLRegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AB2C61F5EF3E80082DC13 /* LLRegexHelper.swift */; };
+		967889AB1F61064500CE63C5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967889AA1F61064500CE63C5 /* APIManager.swift */; };
+		967889B11F61203C00CE63C5 /* LLToModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967889B01F61203C00CE63C5 /* LLToModelExtension.swift */; };
+		967889B81F615E4400CE63C5 /* LLHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967889B61F615E4400CE63C5 /* LLHomeCell.swift */; };
+		967889B91F615E4400CE63C5 /* LLHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967889B71F615E4400CE63C5 /* LLHomeCell.xib */; };
 		96C7C3CF1F5E526800ED93DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C3CE1F5E526800ED93DC /* AppDelegate.swift */; };
 		96C7C3D11F5E526800ED93DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C3D01F5E526800ED93DC /* ViewController.swift */; };
 		96C7C3D41F5E526800ED93DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C7C3D21F5E526800ED93DC /* Main.storyboard */; };
@@ -30,10 +33,12 @@
 		96C7C4131F5E742800ED93DC /* Ext+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C40B1F5E742800ED93DC /* Ext+UIView.swift */; };
 		96C7C4151F5E76D400ED93DC /* pch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C4141F5E76D400ED93DC /* pch.swift */; };
 		96C7C4171F5E7ED400ED93DC /* LLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C4161F5E7ED400ED93DC /* LLBaseViewController.swift */; };
-		96C7C41B1F5E7FC500ED93DC /* LLHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C41A1F5E7FC500ED93DC /* LLHomeViewController.swift */; };
 		96C7C41D1F5E7FD300ED93DC /* LLMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C41C1F5E7FD300ED93DC /* LLMeViewController.swift */; };
 		96C7C41F1F5E809B00ED93DC /* LLTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C41E1F5E809B00ED93DC /* LLTabbarViewController.swift */; };
 		96C7C4211F5E8C9400ED93DC /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 96C7C4201F5E8C9400ED93DC /* menu.json */; };
+		96F161651F5FE03100B1C478 /* LLHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F161611F5FE03100B1C478 /* LLHomeViewController.swift */; };
+		96F161671F5FE06200B1C478 /* LLHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F161661F5FE06200B1C478 /* LLHomeModel.swift */; };
+		96F161691F5FE0C600B1C478 /* LLHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F161681F5FE0C600B1C478 /* LLHomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +69,12 @@
 		8C4AB2BB1F5EE4FB0082DC13 /* YTKKeyValueStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKKeyValueStore.m; sourceTree = "<group>"; };
 		8C4AB2C01F5EED9F0082DC13 /* LLHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLHelper.swift; sourceTree = "<group>"; };
 		8C4AB2C21F5EF06A0082DC13 /* Ext+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ext+String.swift"; sourceTree = "<group>"; };
-		8C4AB2C41F5EF1480082DC13 /* LLArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LLArrayDataSource.swift; path = LLProgramFramework.Swift/General/Category/LLArrayDataSource.swift; sourceTree = SOURCE_ROOT; };
 		8C4AB2C61F5EF3E80082DC13 /* LLRegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLRegexHelper.swift; sourceTree = "<group>"; };
+		961AD55B1F60DBD300532D17 /* LLProgramFramework+Bridging+Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LLProgramFramework+Bridging+Header.h"; sourceTree = "<group>"; };
+		967889AA1F61064500CE63C5 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		967889B01F61203C00CE63C5 /* LLToModelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLToModelExtension.swift; sourceTree = "<group>"; };
+		967889B61F615E4400CE63C5 /* LLHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLHomeCell.swift; sourceTree = "<group>"; };
+		967889B71F615E4400CE63C5 /* LLHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLHomeCell.xib; sourceTree = "<group>"; };
 		96C7C3CB1F5E526800ED93DC /* LLProgramFramework.Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLProgramFramework.Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C7C3CE1F5E526800ED93DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96C7C3D01F5E526800ED93DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,10 +96,12 @@
 		96C7C40B1F5E742800ED93DC /* Ext+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ext+UIView.swift"; sourceTree = "<group>"; };
 		96C7C4141F5E76D400ED93DC /* pch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pch.swift; sourceTree = "<group>"; };
 		96C7C4161F5E7ED400ED93DC /* LLBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLBaseViewController.swift; sourceTree = "<group>"; };
-		96C7C41A1F5E7FC500ED93DC /* LLHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLHomeViewController.swift; sourceTree = "<group>"; };
 		96C7C41C1F5E7FD300ED93DC /* LLMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLMeViewController.swift; sourceTree = "<group>"; };
 		96C7C41E1F5E809B00ED93DC /* LLTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLTabbarViewController.swift; sourceTree = "<group>"; };
 		96C7C4201F5E8C9400ED93DC /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
+		96F161611F5FE03100B1C478 /* LLHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLHomeViewController.swift; sourceTree = "<group>"; };
+		96F161661F5FE06200B1C478 /* LLHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLHomeModel.swift; sourceTree = "<group>"; };
+		96F161681F5FE0C600B1C478 /* LLHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLHomeViewModel.swift; sourceTree = "<group>"; };
 		AF2C931CDF45EB4AACFCE5A5 /* Pods-LLProgramFramework.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLProgramFramework.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLProgramFramework.Swift/Pods-LLProgramFramework.Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,6 +276,8 @@
 		96C7C4011F5E65B500ED93DC /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				967889AA1F61064500CE63C5 /* APIManager.swift */,
+				967889B01F61203C00CE63C5 /* LLToModelExtension.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -274,6 +287,7 @@
 			children = (
 				8C4AB2B21F5EE4290082DC13 /* FDFullscreenPopGesture */,
 				8C4AB2B61F5EE4FB0082DC13 /* LLFMDB */,
+				961AD55B1F60DBD300532D17 /* LLProgramFramework+Bridging+Header.h */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -318,7 +332,6 @@
 		96C7C40E1F5E742800ED93DC /* UIKitAddition */ = {
 			isa = PBXGroup;
 			children = (
-				8C4AB2C41F5EF1480082DC13 /* LLArrayDataSource.swift */,
 			);
 			path = UIKitAddition;
 			sourceTree = "<group>";
@@ -334,9 +347,45 @@
 		96C7C4191F5E7F8E00ED93DC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				96C7C41A1F5E7FC500ED93DC /* LLHomeViewController.swift */,
+				96F161601F5FE03100B1C478 /* C */,
+				96F161621F5FE03100B1C478 /* Model */,
+				96F161631F5FE03100B1C478 /* V */,
+				96F161641F5FE03100B1C478 /* ViewModel */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		96F161601F5FE03100B1C478 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				96F161611F5FE03100B1C478 /* LLHomeViewController.swift */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		96F161621F5FE03100B1C478 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96F161661F5FE06200B1C478 /* LLHomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		96F161631F5FE03100B1C478 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				967889B61F615E4400CE63C5 /* LLHomeCell.swift */,
+				967889B71F615E4400CE63C5 /* LLHomeCell.xib */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		96F161641F5FE03100B1C478 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				96F161681F5FE0C600B1C478 /* LLHomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9ED5B593DD31C71ABDB2069B /* Pods */ = {
@@ -413,6 +462,7 @@
 		96C7C3C31F5E526800ED93DC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LL;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = aokamu;
@@ -463,6 +513,7 @@
 				96C7C3D61F5E526800ED93DC /* Assets.xcassets in Resources */,
 				96C7C4211F5E8C9400ED93DC /* menu.json in Resources */,
 				96C7C3D41F5E526800ED93DC /* Main.storyboard in Resources */,
+				967889B91F615E4400CE63C5 /* LLHomeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,14 +577,22 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -547,11 +606,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96C7C41B1F5E7FC500ED93DC /* LLHomeViewController.swift in Sources */,
 				96C7C4131F5E742800ED93DC /* Ext+UIView.swift in Sources */,
 				96C7C4111F5E742800ED93DC /* Ext+UIImageView.swift in Sources */,
 				96C7C3D11F5E526800ED93DC /* ViewController.swift in Sources */,
 				96C7C41D1F5E7FD300ED93DC /* LLMeViewController.swift in Sources */,
+				967889B81F615E4400CE63C5 /* LLHomeCell.swift in Sources */,
 				96C7C4101F5E742800ED93DC /* Ext+UIButton.swift in Sources */,
 				96C7C4041F5E6DCA00ED93DC /* LLNavigationController.swift in Sources */,
 				8C4AB2C11F5EED9F0082DC13 /* LLHelper.swift in Sources */,
@@ -561,10 +620,14 @@
 				96C7C4151F5E76D400ED93DC /* pch.swift in Sources */,
 				96C7C40F1F5E742800ED93DC /* Ext+UIBarButtonItem.swift in Sources */,
 				8C4AB2C71F5EF3E80082DC13 /* LLRegexHelper.swift in Sources */,
-				8C4AB2C51F5EF1480082DC13 /* LLArrayDataSource.swift in Sources */,
+				96F161691F5FE0C600B1C478 /* LLHomeViewModel.swift in Sources */,
+				96F161671F5FE06200B1C478 /* LLHomeModel.swift in Sources */,
 				96C7C4121F5E742800ED93DC /* Ext+UILable.swift in Sources */,
 				8C4AB2C31F5EF06A0082DC13 /* Ext+String.swift in Sources */,
 				96C7C3CF1F5E526800ED93DC /* AppDelegate.swift in Sources */,
+				96F161651F5FE03100B1C478 /* LLHomeViewController.swift in Sources */,
+				967889B11F61203C00CE63C5 /* LLToModelExtension.swift in Sources */,
+				967889AB1F61064500CE63C5 /* APIManager.swift in Sources */,
 				8C4AB2B51F5EE4290082DC13 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				96C7C41F1F5E809B00ED93DC /* LLTabbarViewController.swift in Sources */,
 			);
@@ -725,6 +788,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "aokamu.LLProgramFramework-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/work/Desktop/LLProgramFramework.Swift/LLProgramFramework.Swift/Vendors/LLProgramFramework+Bridging+Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -740,6 +804,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "aokamu.LLProgramFramework-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/work/Desktop/LLProgramFramework.Swift/LLProgramFramework.Swift/Vendors/LLProgramFramework+Bridging+Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

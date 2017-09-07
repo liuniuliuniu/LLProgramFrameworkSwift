@@ -34,7 +34,6 @@ class LLTabbarViewController: UITabBarController {
             return
         }
         
-        
         let anyObject = json as AnyObject
         
         guard let dict = anyObject  as? [String : Any] else {
@@ -48,17 +47,13 @@ class LLTabbarViewController: UITabBarController {
             
             guard let vcName = dict["page"] as? String else {
                 continue
-            }            
-            
+            }
             guard let title = dict["title"] as? String else {
                 continue
             }
-            
-            
             guard let imageName = dict["normal_icon"] as? String else {
                 continue
             }
-            
           addChildVIewController(vcName: vcName, title: title, imageName: imageName)
         }
         
@@ -69,15 +64,13 @@ class LLTabbarViewController: UITabBarController {
     func addChildVIewController(vcName:String,title:String,imageName:String){
                 
         var namespace = Bundle.main.infoDictionary!["CFBundleExecutable"]as! String
-        
         if namespace.contains(".") {
             namespace = namespace.replacingOccurrences(of: ".", with: "_")
         }
-        
         let clsName = namespace + "." + vcName
         
-        let cls = NSClassFromString(clsName) as! UIViewController.Type
         
+        let cls = NSClassFromString(clsName) as! UIViewController.Type
         let vc = cls.init()
         
         vc.title = title
