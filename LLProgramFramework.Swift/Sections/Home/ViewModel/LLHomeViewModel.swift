@@ -76,9 +76,5 @@ class LLHomeViewModel: NSObject {
             }, onError: { (error) in
                 
             }).addDisposableTo(bag)
-        
     }
-    
-    
-    
 }

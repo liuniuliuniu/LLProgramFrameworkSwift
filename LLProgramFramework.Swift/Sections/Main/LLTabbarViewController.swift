@@ -14,25 +14,19 @@ class LLTabbarViewController: UITabBarController {
         super.viewDidLoad()        
         
         guard let jsonPath = Bundle.main.path(forResource: "menu.json", ofType: nil) else {
-            print("没有获取到对应的文件路径")
             return
         }
         guard let jsonData = NSData(contentsOfFile: jsonPath) else {
-            print("没有获取到json文件中数据")
             return
         }
             
         guard let json = try? JSONSerialization.jsonObject(with: jsonData as Data, options: .mutableContainers) else {
-            
-            print("123")
-            
             return
         }
         
         let anyObject = json as AnyObject
         
         guard let dict = anyObject  as? [String : Any] else {
-            print("456")
             return
         }
         
@@ -63,9 +57,9 @@ class LLTabbarViewController: UITabBarController {
             namespace = namespace.replacingOccurrences(of: ".", with: "_")
         }
         let clsName = namespace + "." + vcName
-        
-        
+                
         let cls = NSClassFromString(clsName) as! UIViewController.Type
+        
         let vc = cls.init()
         
         vc.title = title

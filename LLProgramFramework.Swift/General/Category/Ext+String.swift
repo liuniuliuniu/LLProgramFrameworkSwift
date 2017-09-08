@@ -15,7 +15,7 @@ extension String {
     /// - Parameter end: 结束的位值
     /// - Returns: 截取后的字符串
     func stringCut(end: Int) ->String{
-        LLLog(self.characters.count)
+        print(self.characters.count)
         if !(end < characters.count) { return "截取超出范围" }
         let sInde = index(startIndex, offsetBy: end)
         return substring(to: sInde)
