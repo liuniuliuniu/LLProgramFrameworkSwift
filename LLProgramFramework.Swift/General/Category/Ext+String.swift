@@ -44,17 +44,22 @@ extension String {
         return str1 + content + str2
     }
     
-    /// 计算字符串宽高
+    /// 计算字符串的尺寸
     ///
-    /// - Parameter size: size
-    /// - Returns: CGSize
-    func getStringSzie(size: CGFloat = 10) -> CGSize {
-        let baseFont = UIFont.systemFont(ofSize: size)
-        let size = self.size(attributes: [NSFontAttributeName: baseFont])
-        let width = ceil(size.width) + 5
-        let height = ceil(size.height)
-        return CGSize(width: width, height: height)
+    /// - Parameters:
+    ///   - text: 字符串
+    ///   - rectSize: 容器的尺寸
+    ///   - fontSize: 字体
+    /// - Returns: 尺寸
+    func  getStringSize(text: String, rectSize: CGSize,fontSize: CGFloat) -> CGSize {
+        let str = text as NSString
+        let rect = str.boundingRect(with: rectSize, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: fontSize)], context: nil)
+        
+        return rect.size
     }
+
+    
+    
     
     /// 输入字符串 输出数组
     /// e.g  "qwert" -> ["q","w","e","r","t"]

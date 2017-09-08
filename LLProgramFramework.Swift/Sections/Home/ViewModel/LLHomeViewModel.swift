@@ -13,8 +13,11 @@ import Moya
 
 let cellID = "LLHomeCellID"
 
+typealias ClosureType = (Int) -> Void
+
 class LLHomeViewModel: NSObject {
     
+
     var bag : DisposeBag = DisposeBag()
     
     private let provider = RxMoyaProvider<APIManager>()
@@ -22,6 +25,8 @@ class LLHomeViewModel: NSObject {
     let dispose = DisposeBag()        
 
     var modelObserable = Variable<[StoryModel]> ([])
+    
+    var pushCloure : ClosureType?
     
     var tableV = UITableView()
     
@@ -33,6 +38,7 @@ class LLHomeViewModel: NSObject {
         
         tableV.tableFooterView = UIView.init()
         
+                
         //MARK: Rx 绑定tableView数据
         modelObserable.asObservable().bind(to: tableV.rx.items(cellIdentifier: cellID, cellType: LLHomeCell.self)){ row , model , cell in
             
@@ -50,11 +56,29 @@ class LLHomeViewModel: NSObject {
         }).addDisposableTo(bag)
         
         
+        
+        weak var weakSelf = self
         tableV.rx.modelSelected(StoryModel.self).subscribe(onNext: { (model : StoryModel) in
-            
-            print(model.image ?? "")
+                        
+            weakSelf?.pushCloure!(model.id!)
             
         }).addDisposableTo(bag)
         
-    }    
+        
+        // 请求数据
+        provider
+            .request(.GetHomeList)
+            .filterSuccessfulStatusCodes()
+            .mapJSON().mapObject(type: LLHomeModel.self).subscribe(onNext: { (model) in
+                
+                self.modelObserable.value = model.stories!
+                
+            }, onError: { (error) in
+                
+            }).addDisposableTo(bag)
+        
+    }
+    
+    
+    
 }

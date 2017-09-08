@@ -348,8 +348,8 @@
 			isa = PBXGroup;
 			children = (
 				96F161601F5FE03100B1C478 /* C */,
-				96F161621F5FE03100B1C478 /* Model */,
 				96F161631F5FE03100B1C478 /* V */,
+				96F161621F5FE03100B1C478 /* Model */,
 				96F161641F5FE03100B1C478 /* ViewModel */,
 			);
 			path = Home;

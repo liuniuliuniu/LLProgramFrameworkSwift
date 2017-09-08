@@ -13,9 +13,6 @@ import Moya
 
 class LLHomeViewController: LLBaseViewController {
     
-    var bag : DisposeBag = DisposeBag()
-    
-    var provider = RxMoyaProvider<APIManager>()
     
     let viewModel = LLHomeViewModel()
     
@@ -26,36 +23,15 @@ class LLHomeViewController: LLBaseViewController {
         view.addSubview(tabV)
         viewModel.tableV = tabV;
         viewModel.GetData()
-        loadData()
-    }
-
-}
-
-
-extension LLHomeViewController{
-
-    func loadData() {
-                                
-    provider
-        .request(.GetHomeList)
-        .filterSuccessfulStatusCodes()
-        .mapJSON().mapObject(type: LLHomeModel.self).subscribe(onNext: { (model) in
-            
-            self.viewModel.modelObserable.value = model.stories!
-            
-        }, onError: { (error) in
-            
-        }).addDisposableTo(bag)
         
-
+        
+        weak var weakself = self
+        viewModel.pushCloure = { ( id : Int) in
+            
+        }
+        
     }
-    
-    func loadMoreData(){
-
-    }
-
 }
-
 
 
 

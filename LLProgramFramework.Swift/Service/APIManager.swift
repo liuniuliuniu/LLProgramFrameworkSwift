@@ -10,9 +10,8 @@ import Foundation
 import Moya
 
 enum APIManager{
-    
     case GetHomeList // 获取首页列表
-    case GetHomeDetail // 获取详情页
+    case GetHomeDetail(Int)  // 获取详情页
 
 }
 
@@ -24,15 +23,15 @@ extension APIManager: TargetType {
     /// The path to be appended to `baseURL` to form the full `URL`.
     var path: String {
         switch self {
-        case .GetHomeList:
+            
+        case .GetHomeList: // 不带参数的请求
             return "4/news/latest"
-        case .GetHomeDetail://start-image 后为图像分辨率，接受任意的 number*number 格式， number 为任意非负整数，返回值均相同。
-            return "4/start-image/1080*1776"
+        case .GetHomeDetail(let id):  // 带参数的请求
+            return "4/theme/\(id)"
         }
     }
-        
-    /// The HTTP method used in the request.
-    var method: Moya.Method {
+    
+    var method: Moya.Method {        
         return .get
     }
     /// The parameters to be incoded in the request.

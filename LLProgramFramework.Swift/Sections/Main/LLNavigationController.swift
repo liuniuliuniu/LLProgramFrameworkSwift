@@ -22,17 +22,12 @@ class LLNavigationController: UINavigationController ,UIGestureRecognizerDelegat
         
         var title : String?
         
-        
         if childViewControllers.count > 0 {
-            
             title = "返回"
-            
             if childViewControllers.count == 1 {
                 title = childViewControllers.first?.title
-                
             }
-            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(setHighlightedImg:"navigationbar_back_withtext", title: title, target: self, action: #selector(popVC))
-            
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(setHighlightedImg:"navigationbar_back_withtext", title: title, target: self, action: #selector(popVC))            
         }
         super.pushViewController(viewController, animated: animated)
     }

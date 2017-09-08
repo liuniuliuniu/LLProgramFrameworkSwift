@@ -13,20 +13,15 @@ class LLTabbarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()        
         
-        
-        // 1.获取json文件路径
         guard let jsonPath = Bundle.main.path(forResource: "menu.json", ofType: nil) else {
             print("没有获取到对应的文件路径")
             return
         }
-        
-        // 2.读取json文件中的内容
         guard let jsonData = NSData(contentsOfFile: jsonPath) else {
             print("没有获取到json文件中数据")
             return
         }
-        
-        
+            
         guard let json = try? JSONSerialization.jsonObject(with: jsonData as Data, options: .mutableContainers) else {
             
             print("123")

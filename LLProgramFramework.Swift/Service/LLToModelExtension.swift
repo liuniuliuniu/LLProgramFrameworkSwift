@@ -29,7 +29,6 @@ extension Observable{
     }
 }
 
-
 enum RxSwiftMoyaError: String {
     case ParseJSONError
     case OtherError
