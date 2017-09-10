@@ -36,7 +36,7 @@ let LLNomalFontSize:CGFloat = 14
 let LLSmallFontSize:CGFloat = 10
 
 // 自定义打印方法
-func print<T>(_ message : T, file : String = #file, funcName : String = #function, lineNum : Int = #line) {
+func printLog<T>(_ message : T, file : String = #file, funcName : String = #function, lineNum : Int = #line) {
     
     #if DEBUG
         

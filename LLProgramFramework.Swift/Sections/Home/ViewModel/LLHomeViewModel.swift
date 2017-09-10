@@ -51,7 +51,7 @@ class LLHomeViewModel: NSObject {
         
         tableV.rx.itemSelected.subscribe(onNext: { (index : IndexPath) in
             
-            print("\(index.row)")            
+            printLog("\(index.row)")
             
         }).addDisposableTo(bag)
         
