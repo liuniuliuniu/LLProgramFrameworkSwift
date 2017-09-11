@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14C539C7BF9B5FC2F4CF4FFA /* Pods_LLProgramFramework_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394E802497045803FFF47F8E /* Pods_LLProgramFramework_Swift.framework */; };
+		14C539C7BF9B5FC2F4CF4FFA /* Pods_LLProgramFrameworkSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394E802497045803FFF47F8E /* Pods_LLProgramFrameworkSwift.framework */; };
 		8C4AB2B51F5EE4290082DC13 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AB2B41F5EE4290082DC13 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		8C4AB2BC1F5EE4FB0082DC13 /* LLKeyValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AB2B81F5EE4FB0082DC13 /* LLKeyValueStore.m */; };
 		8C4AB2BD1F5EE4FB0082DC13 /* YTKKeyValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4AB2BB1F5EE4FB0082DC13 /* YTKKeyValueStore.m */; };
@@ -23,8 +23,8 @@
 		96C7C3D41F5E526800ED93DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C7C3D21F5E526800ED93DC /* Main.storyboard */; };
 		96C7C3D61F5E526800ED93DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C7C3D51F5E526800ED93DC /* Assets.xcassets */; };
 		96C7C3D91F5E526800ED93DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C7C3D71F5E526800ED93DC /* LaunchScreen.storyboard */; };
-		96C7C3E41F5E526800ED93DC /* LLProgramFramework_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C3E31F5E526800ED93DC /* LLProgramFramework_SwiftTests.swift */; };
-		96C7C3EF1F5E526800ED93DC /* LLProgramFramework_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C3EE1F5E526800ED93DC /* LLProgramFramework_SwiftUITests.swift */; };
+		96C7C3E41F5E526800ED93DC /* LLProgramFrameworkSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C3E31F5E526800ED93DC /* LLProgramFrameworkSwiftTests.swift */; };
+		96C7C3EF1F5E526800ED93DC /* LLProgramFrameworkSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C3EE1F5E526800ED93DC /* LLProgramFrameworkSwiftUITests.swift */; };
 		96C7C4041F5E6DCA00ED93DC /* LLNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C4031F5E6DCA00ED93DC /* LLNavigationController.swift */; };
 		96C7C40F1F5E742800ED93DC /* Ext+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C4071F5E742800ED93DC /* Ext+UIBarButtonItem.swift */; };
 		96C7C4101F5E742800ED93DC /* Ext+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C4081F5E742800ED93DC /* Ext+UIButton.swift */; };
@@ -47,20 +47,20 @@
 			containerPortal = 96C7C3C31F5E526800ED93DC /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 96C7C3CA1F5E526800ED93DC;
-			remoteInfo = LLProgramFramework.Swift;
+			remoteInfo = LLProgramFrameworkSwift;
 		};
 		96C7C3EB1F5E526800ED93DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 96C7C3C31F5E526800ED93DC /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 96C7C3CA1F5E526800ED93DC;
-			remoteInfo = LLProgramFramework.Swift;
+			remoteInfo = LLProgramFrameworkSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F6253EBC457D8FBD2E7A444 /* Pods-LLProgramFramework.Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLProgramFramework.Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLProgramFramework.Swift/Pods-LLProgramFramework.Swift.release.xcconfig"; sourceTree = "<group>"; };
-		394E802497045803FFF47F8E /* Pods_LLProgramFramework_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLProgramFramework_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6253EBC457D8FBD2E7A444 /* Pods-LLProgramFrameworkSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLProgramFrameworkSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLProgramFrameworkSwift/Pods-LLProgramFrameworkSwift.release.xcconfig"; sourceTree = "<group>"; };
+		394E802497045803FFF47F8E /* Pods_LLProgramFrameworkSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLProgramFrameworkSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4AB2B31F5EE4290082DC13 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		8C4AB2B41F5EE4290082DC13 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		8C4AB2B71F5EE4FB0082DC13 /* LLKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLKeyValueStore.h; sourceTree = "<group>"; };
@@ -76,17 +76,17 @@
 		967889B01F61203C00CE63C5 /* LLToModelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLToModelExtension.swift; sourceTree = "<group>"; };
 		967889B61F615E4400CE63C5 /* LLHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLHomeCell.swift; sourceTree = "<group>"; };
 		967889B71F615E4400CE63C5 /* LLHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLHomeCell.xib; sourceTree = "<group>"; };
-		96C7C3CB1F5E526800ED93DC /* LLProgramFramework.Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLProgramFramework.Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96C7C3CB1F5E526800ED93DC /* LLProgramFrameworkSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLProgramFrameworkSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C7C3CE1F5E526800ED93DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96C7C3D31F5E526800ED93DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96C7C3D51F5E526800ED93DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96C7C3D81F5E526800ED93DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96C7C3DA1F5E526800ED93DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96C7C3DF1F5E526800ED93DC /* LLProgramFramework.SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLProgramFramework.SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96C7C3E31F5E526800ED93DC /* LLProgramFramework_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLProgramFramework_SwiftTests.swift; sourceTree = "<group>"; };
+		96C7C3DF1F5E526800ED93DC /* LLProgramFrameworkSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLProgramFrameworkSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96C7C3E31F5E526800ED93DC /* LLProgramFrameworkSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLProgramFrameworkSwiftTests.swift; sourceTree = "<group>"; };
 		96C7C3E51F5E526800ED93DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96C7C3EA1F5E526800ED93DC /* LLProgramFramework.SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLProgramFramework.SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96C7C3EE1F5E526800ED93DC /* LLProgramFramework_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLProgramFramework_SwiftUITests.swift; sourceTree = "<group>"; };
+		96C7C3EA1F5E526800ED93DC /* LLProgramFrameworkSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLProgramFrameworkSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96C7C3EE1F5E526800ED93DC /* LLProgramFrameworkSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLProgramFrameworkSwiftUITests.swift; sourceTree = "<group>"; };
 		96C7C3F01F5E526800ED93DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96C7C4031F5E6DCA00ED93DC /* LLNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLNavigationController.swift; sourceTree = "<group>"; };
 		96C7C4071F5E742800ED93DC /* Ext+UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ext+UIBarButtonItem.swift"; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		96F161611F5FE03100B1C478 /* LLHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLHomeViewController.swift; sourceTree = "<group>"; };
 		96F161661F5FE06200B1C478 /* LLHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLHomeModel.swift; sourceTree = "<group>"; };
 		96F161681F5FE0C600B1C478 /* LLHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLHomeViewModel.swift; sourceTree = "<group>"; };
-		AF2C931CDF45EB4AACFCE5A5 /* Pods-LLProgramFramework.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLProgramFramework.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLProgramFramework.Swift/Pods-LLProgramFramework.Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		AF2C931CDF45EB4AACFCE5A5 /* Pods-LLProgramFrameworkSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLProgramFrameworkSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLProgramFrameworkSwift/Pods-LLProgramFrameworkSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14C539C7BF9B5FC2F4CF4FFA /* Pods_LLProgramFramework_Swift.framework in Frameworks */,
+				14C539C7BF9B5FC2F4CF4FFA /* Pods_LLProgramFrameworkSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +134,7 @@
 		35788AC3AB0D0516BAB773DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				394E802497045803FFF47F8E /* Pods_LLProgramFramework_Swift.framework */,
+				394E802497045803FFF47F8E /* Pods_LLProgramFrameworkSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,9 +170,9 @@
 		96C7C3C21F5E526800ED93DC = {
 			isa = PBXGroup;
 			children = (
-				96C7C3CD1F5E526800ED93DC /* LLProgramFramework.Swift */,
-				96C7C3E21F5E526800ED93DC /* LLProgramFramework.SwiftTests */,
-				96C7C3ED1F5E526800ED93DC /* LLProgramFramework.SwiftUITests */,
+				96C7C3CD1F5E526800ED93DC /* LLProgramFrameworkSwift */,
+				96C7C3E21F5E526800ED93DC /* LLProgramFrameworkSwiftTests */,
+				96C7C3ED1F5E526800ED93DC /* LLProgramFrameworkSwiftUITests */,
 				96C7C3CC1F5E526800ED93DC /* Products */,
 				9ED5B593DD31C71ABDB2069B /* Pods */,
 				35788AC3AB0D0516BAB773DB /* Frameworks */,
@@ -182,14 +182,14 @@
 		96C7C3CC1F5E526800ED93DC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96C7C3CB1F5E526800ED93DC /* LLProgramFramework.Swift.app */,
-				96C7C3DF1F5E526800ED93DC /* LLProgramFramework.SwiftTests.xctest */,
-				96C7C3EA1F5E526800ED93DC /* LLProgramFramework.SwiftUITests.xctest */,
+				96C7C3CB1F5E526800ED93DC /* LLProgramFrameworkSwift.app */,
+				96C7C3DF1F5E526800ED93DC /* LLProgramFrameworkSwiftTests.xctest */,
+				96C7C3EA1F5E526800ED93DC /* LLProgramFrameworkSwiftUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		96C7C3CD1F5E526800ED93DC /* LLProgramFramework.Swift */ = {
+		96C7C3CD1F5E526800ED93DC /* LLProgramFrameworkSwift */ = {
 			isa = PBXGroup;
 			children = (
 				96C7C3FC1F5E658F00ED93DC /* General */,
@@ -205,25 +205,25 @@
 				96C7C3D71F5E526800ED93DC /* LaunchScreen.storyboard */,
 				96C7C3DA1F5E526800ED93DC /* Info.plist */,
 			);
-			path = LLProgramFramework.Swift;
+			path = LLProgramFrameworkSwift;
 			sourceTree = "<group>";
 		};
-		96C7C3E21F5E526800ED93DC /* LLProgramFramework.SwiftTests */ = {
+		96C7C3E21F5E526800ED93DC /* LLProgramFrameworkSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				96C7C3E31F5E526800ED93DC /* LLProgramFramework_SwiftTests.swift */,
+				96C7C3E31F5E526800ED93DC /* LLProgramFrameworkSwiftTests.swift */,
 				96C7C3E51F5E526800ED93DC /* Info.plist */,
 			);
-			path = LLProgramFramework.SwiftTests;
+			path = LLProgramFrameworkSwiftTests;
 			sourceTree = "<group>";
 		};
-		96C7C3ED1F5E526800ED93DC /* LLProgramFramework.SwiftUITests */ = {
+		96C7C3ED1F5E526800ED93DC /* LLProgramFrameworkSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
-				96C7C3EE1F5E526800ED93DC /* LLProgramFramework_SwiftUITests.swift */,
+				96C7C3EE1F5E526800ED93DC /* LLProgramFrameworkSwiftUITests.swift */,
 				96C7C3F01F5E526800ED93DC /* Info.plist */,
 			);
-			path = LLProgramFramework.SwiftUITests;
+			path = LLProgramFrameworkSwiftUITests;
 			sourceTree = "<group>";
 		};
 		96C7C3FC1F5E658F00ED93DC /* General */ = {
@@ -391,8 +391,8 @@
 		9ED5B593DD31C71ABDB2069B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AF2C931CDF45EB4AACFCE5A5 /* Pods-LLProgramFramework.Swift.debug.xcconfig */,
-				2F6253EBC457D8FBD2E7A444 /* Pods-LLProgramFramework.Swift.release.xcconfig */,
+				AF2C931CDF45EB4AACFCE5A5 /* Pods-LLProgramFrameworkSwift.debug.xcconfig */,
+				2F6253EBC457D8FBD2E7A444 /* Pods-LLProgramFrameworkSwift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -400,9 +400,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		96C7C3CA1F5E526800ED93DC /* LLProgramFramework.Swift */ = {
+		96C7C3CA1F5E526800ED93DC /* LLProgramFrameworkSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96C7C3F31F5E526800ED93DC /* Build configuration list for PBXNativeTarget "LLProgramFramework.Swift" */;
+			buildConfigurationList = 96C7C3F31F5E526800ED93DC /* Build configuration list for PBXNativeTarget "LLProgramFrameworkSwift" */;
 			buildPhases = (
 				58DBAD7A36243789DEDFBE48 /* [CP] Check Pods Manifest.lock */,
 				96C7C3C71F5E526800ED93DC /* Sources */,
@@ -415,14 +415,14 @@
 			);
 			dependencies = (
 			);
-			name = LLProgramFramework.Swift;
-			productName = LLProgramFramework.Swift;
-			productReference = 96C7C3CB1F5E526800ED93DC /* LLProgramFramework.Swift.app */;
+			name = LLProgramFrameworkSwift;
+			productName = LLProgramFrameworkSwift;
+			productReference = 96C7C3CB1F5E526800ED93DC /* LLProgramFrameworkSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		96C7C3DE1F5E526800ED93DC /* LLProgramFramework.SwiftTests */ = {
+		96C7C3DE1F5E526800ED93DC /* LLProgramFrameworkSwiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96C7C3F61F5E526800ED93DC /* Build configuration list for PBXNativeTarget "LLProgramFramework.SwiftTests" */;
+			buildConfigurationList = 96C7C3F61F5E526800ED93DC /* Build configuration list for PBXNativeTarget "LLProgramFrameworkSwiftTests" */;
 			buildPhases = (
 				96C7C3DB1F5E526800ED93DC /* Sources */,
 				96C7C3DC1F5E526800ED93DC /* Frameworks */,
@@ -433,14 +433,14 @@
 			dependencies = (
 				96C7C3E11F5E526800ED93DC /* PBXTargetDependency */,
 			);
-			name = LLProgramFramework.SwiftTests;
-			productName = LLProgramFramework.SwiftTests;
-			productReference = 96C7C3DF1F5E526800ED93DC /* LLProgramFramework.SwiftTests.xctest */;
+			name = LLProgramFrameworkSwiftTests;
+			productName = LLProgramFrameworkSwiftTests;
+			productReference = 96C7C3DF1F5E526800ED93DC /* LLProgramFrameworkSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		96C7C3E91F5E526800ED93DC /* LLProgramFramework.SwiftUITests */ = {
+		96C7C3E91F5E526800ED93DC /* LLProgramFrameworkSwiftUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96C7C3F91F5E526800ED93DC /* Build configuration list for PBXNativeTarget "LLProgramFramework.SwiftUITests" */;
+			buildConfigurationList = 96C7C3F91F5E526800ED93DC /* Build configuration list for PBXNativeTarget "LLProgramFrameworkSwiftUITests" */;
 			buildPhases = (
 				96C7C3E61F5E526800ED93DC /* Sources */,
 				96C7C3E71F5E526800ED93DC /* Frameworks */,
@@ -451,9 +451,9 @@
 			dependencies = (
 				96C7C3EC1F5E526800ED93DC /* PBXTargetDependency */,
 			);
-			name = LLProgramFramework.SwiftUITests;
-			productName = LLProgramFramework.SwiftUITests;
-			productReference = 96C7C3EA1F5E526800ED93DC /* LLProgramFramework.SwiftUITests.xctest */;
+			name = LLProgramFrameworkSwiftUITests;
+			productName = LLProgramFrameworkSwiftUITests;
+			productReference = 96C7C3EA1F5E526800ED93DC /* LLProgramFrameworkSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -484,7 +484,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 96C7C3C61F5E526800ED93DC /* Build configuration list for PBXProject "LLProgramFramework.Swift" */;
+			buildConfigurationList = 96C7C3C61F5E526800ED93DC /* Build configuration list for PBXProject "LLProgramFrameworkSwift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -497,9 +497,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				96C7C3CA1F5E526800ED93DC /* LLProgramFramework.Swift */,
-				96C7C3DE1F5E526800ED93DC /* LLProgramFramework.SwiftTests */,
-				96C7C3E91F5E526800ED93DC /* LLProgramFramework.SwiftUITests */,
+				96C7C3CA1F5E526800ED93DC /* LLProgramFrameworkSwift */,
+				96C7C3DE1F5E526800ED93DC /* LLProgramFrameworkSwiftTests */,
+				96C7C3E91F5E526800ED93DC /* LLProgramFrameworkSwiftUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -545,7 +545,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LLProgramFramework.Swift-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-LLProgramFrameworkSwift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -564,7 +564,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLProgramFramework.Swift/Pods-LLProgramFramework.Swift-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLProgramFrameworkSwift/Pods-LLProgramFrameworkSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9BC37FB5A8ADC68342328F82 /* [CP] Embed Pods Frameworks */ = {
@@ -573,7 +573,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LLProgramFramework.Swift/Pods-LLProgramFramework.Swift-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-LLProgramFrameworkSwift/Pods-LLProgramFrameworkSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -602,7 +602,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLProgramFramework.Swift/Pods-LLProgramFramework.Swift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLProgramFrameworkSwift/Pods-LLProgramFrameworkSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -643,7 +643,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96C7C3E41F5E526800ED93DC /* LLProgramFramework_SwiftTests.swift in Sources */,
+				96C7C3E41F5E526800ED93DC /* LLProgramFrameworkSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,7 +651,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96C7C3EF1F5E526800ED93DC /* LLProgramFramework_SwiftUITests.swift in Sources */,
+				96C7C3EF1F5E526800ED93DC /* LLProgramFrameworkSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,12 +660,12 @@
 /* Begin PBXTargetDependency section */
 		96C7C3E11F5E526800ED93DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 96C7C3CA1F5E526800ED93DC /* LLProgramFramework.Swift */;
+			target = 96C7C3CA1F5E526800ED93DC /* LLProgramFrameworkSwift */;
 			targetProxy = 96C7C3E01F5E526800ED93DC /* PBXContainerItemProxy */;
 		};
 		96C7C3EC1F5E526800ED93DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 96C7C3CA1F5E526800ED93DC /* LLProgramFramework.Swift */;
+			target = 96C7C3CA1F5E526800ED93DC /* LLProgramFrameworkSwift */;
 			targetProxy = 96C7C3EB1F5E526800ED93DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -785,32 +785,32 @@
 		};
 		96C7C3F41F5E526800ED93DC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF2C931CDF45EB4AACFCE5A5 /* Pods-LLProgramFramework.Swift.debug.xcconfig */;
+			baseConfigurationReference = AF2C931CDF45EB4AACFCE5A5 /* Pods-LLProgramFrameworkSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SX8PGCDPTD;
-				INFOPLIST_FILE = LLProgramFramework.Swift/Info.plist;
+				INFOPLIST_FILE = LLProgramFrameworkSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "aokamu.LLProgramFramework-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = aokamu.LLProgramFrameworkSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/work/Desktop/LLProgramFramework.Swift/LLProgramFramework.Swift/Vendors/LLProgramFramework+Bridging+Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/liushaohua/Desktop/LLProgramFrameworkSwift/LLProgramFrameworkSwift/Vendors/LLProgramFramework+Bridging+Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		96C7C3F51F5E526800ED93DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F6253EBC457D8FBD2E7A444 /* Pods-LLProgramFramework.Swift.release.xcconfig */;
+			baseConfigurationReference = 2F6253EBC457D8FBD2E7A444 /* Pods-LLProgramFrameworkSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SX8PGCDPTD;
-				INFOPLIST_FILE = LLProgramFramework.Swift/Info.plist;
+				INFOPLIST_FILE = LLProgramFrameworkSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "aokamu.LLProgramFramework-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = aokamu.LLProgramFrameworkSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/work/Desktop/LLProgramFramework.Swift/LLProgramFramework.Swift/Vendors/LLProgramFramework+Bridging+Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/liushaohua/Desktop/LLProgramFrameworkSwift/LLProgramFrameworkSwift/Vendors/LLProgramFramework+Bridging+Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -820,12 +820,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = LLProgramFramework.SwiftTests/Info.plist;
+				INFOPLIST_FILE = LLProgramFrameworkSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "aokamu.LLProgramFramework-SwiftTests";
+				PRODUCT_BUNDLE_IDENTIFIER = aokamu.LLProgramFrameworkSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LLProgramFramework.Swift.app/LLProgramFramework.Swift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LLProgramFrameworkSwift.app/LLProgramFrameworkSwift";
 			};
 			name = Debug;
 		};
@@ -834,12 +834,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = LLProgramFramework.SwiftTests/Info.plist;
+				INFOPLIST_FILE = LLProgramFrameworkSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "aokamu.LLProgramFramework-SwiftTests";
+				PRODUCT_BUNDLE_IDENTIFIER = aokamu.LLProgramFrameworkSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LLProgramFramework.Swift.app/LLProgramFramework.Swift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LLProgramFrameworkSwift.app/LLProgramFrameworkSwift";
 			};
 			name = Release;
 		};
@@ -847,12 +847,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = LLProgramFramework.SwiftUITests/Info.plist;
+				INFOPLIST_FILE = LLProgramFrameworkSwiftUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "aokamu.LLProgramFramework-SwiftUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = aokamu.LLProgramFrameworkSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = LLProgramFramework.Swift;
+				TEST_TARGET_NAME = LLProgramFrameworkSwift;
 			};
 			name = Debug;
 		};
@@ -860,19 +860,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = LLProgramFramework.SwiftUITests/Info.plist;
+				INFOPLIST_FILE = LLProgramFrameworkSwiftUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "aokamu.LLProgramFramework-SwiftUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = aokamu.LLProgramFrameworkSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = LLProgramFramework.Swift;
+				TEST_TARGET_NAME = LLProgramFrameworkSwift;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		96C7C3C61F5E526800ED93DC /* Build configuration list for PBXProject "LLProgramFramework.Swift" */ = {
+		96C7C3C61F5E526800ED93DC /* Build configuration list for PBXProject "LLProgramFrameworkSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96C7C3F11F5E526800ED93DC /* Debug */,
@@ -881,7 +881,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96C7C3F31F5E526800ED93DC /* Build configuration list for PBXNativeTarget "LLProgramFramework.Swift" */ = {
+		96C7C3F31F5E526800ED93DC /* Build configuration list for PBXNativeTarget "LLProgramFrameworkSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96C7C3F41F5E526800ED93DC /* Debug */,
@@ -890,7 +890,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96C7C3F61F5E526800ED93DC /* Build configuration list for PBXNativeTarget "LLProgramFramework.SwiftTests" */ = {
+		96C7C3F61F5E526800ED93DC /* Build configuration list for PBXNativeTarget "LLProgramFrameworkSwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96C7C3F71F5E526800ED93DC /* Debug */,
@@ -899,7 +899,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96C7C3F91F5E526800ED93DC /* Build configuration list for PBXNativeTarget "LLProgramFramework.SwiftUITests" */ = {
+		96C7C3F91F5E526800ED93DC /* Build configuration list for PBXNativeTarget "LLProgramFrameworkSwiftUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96C7C3FA1F5E526800ED93DC /* Debug */,

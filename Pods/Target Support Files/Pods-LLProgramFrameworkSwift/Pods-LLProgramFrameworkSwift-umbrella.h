@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_LLProgramFramework_SwiftVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_LLProgramFramework_SwiftVersionString[];
+FOUNDATION_EXPORT double Pods_LLProgramFrameworkSwiftVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_LLProgramFrameworkSwiftVersionString[];
 

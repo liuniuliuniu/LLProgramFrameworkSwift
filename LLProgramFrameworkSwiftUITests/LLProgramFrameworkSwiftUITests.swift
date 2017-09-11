@@ -8,7 +8,7 @@
 
 import XCTest
 
-class LLProgramFramework_SwiftUITests: XCTestCase {
+class LLProgramFrameworkSwiftUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

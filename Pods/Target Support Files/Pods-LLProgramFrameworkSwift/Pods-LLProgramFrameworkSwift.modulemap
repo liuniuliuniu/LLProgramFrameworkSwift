@@ -1,0 +1,6 @@
+framework module Pods_LLProgramFrameworkSwift {
+  umbrella header "Pods-LLProgramFrameworkSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

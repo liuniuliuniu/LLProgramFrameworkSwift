@@ -1,6 +1,6 @@
 platform :ios, '8.0'
 
-target 'LLProgramFramework.Swift' do
+target 'LLProgramFrameworkSwift' do
 
   use_frameworks!
 

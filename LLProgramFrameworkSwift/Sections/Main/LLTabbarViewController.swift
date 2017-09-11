@@ -52,10 +52,8 @@ class LLTabbarViewController: UITabBarController {
 
     func addChildVIewController(vcName:String,title:String,imageName:String){
                 
-        var namespace = Bundle.main.infoDictionary!["CFBundleExecutable"]as! String
-        if namespace.contains(".") {
-            namespace = namespace.replacingOccurrences(of: ".", with: "_")
-        }
+        let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"]as! String
+
         let clsName = namespace + "." + vcName
                 
         let cls = NSClassFromString(clsName) as! UIViewController.Type

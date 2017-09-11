@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import LLProgramFramework_Swift
+@testable import LLProgramFrameworkSwift
 
-class LLProgramFramework_SwiftTests: XCTestCase {
+class LLProgramFrameworkSwiftTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
