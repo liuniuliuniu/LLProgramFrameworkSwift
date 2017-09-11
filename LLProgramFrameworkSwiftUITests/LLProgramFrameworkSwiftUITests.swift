@@ -1,6 +1,6 @@
 //
-//  LLProgramFramework_SwiftUITests.swift
-//  LLProgramFramework.SwiftUITests
+//  LLProgramFrameworkSwiftUITests.swift
+//  LLProgramFrameworkSwiftUITests
 //
 //  Created by 奥卡姆 on 2017/9/5.
 //  Copyright © 2017年 aokamu. All rights reserved.
