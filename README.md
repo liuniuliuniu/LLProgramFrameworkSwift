@@ -17,9 +17,9 @@
 	* Me
 * Service ------网络请求库
 * Macro  ------pch以及全局变量
-* Vendors  ------第三方库
+* Vendors  ------手动继承第三方库
 
-###第三方库
+###Cocoapod第三方库
 
 * RxSwift  ------RxSwift 基础库
 * RxCocoa  ------ 对 UIKit Foundation 进行 Rx 化
