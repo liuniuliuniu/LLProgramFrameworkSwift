@@ -794,7 +794,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aokamu.LLProgramFrameworkSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/liushaohua/Desktop/LLProgramFrameworkSwift/LLProgramFrameworkSwift/Vendors/LLProgramFramework+Bridging+Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "LLProgramFrameworkSwift/Vendors/LLProgramFramework+Bridging+Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -810,7 +810,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aokamu.LLProgramFrameworkSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/liushaohua/Desktop/LLProgramFrameworkSwift/LLProgramFrameworkSwift/Vendors/LLProgramFramework+Bridging+Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "LLProgramFrameworkSwift/Vendors/LLProgramFramework+Bridging+Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
