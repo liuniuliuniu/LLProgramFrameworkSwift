@@ -8,9 +8,19 @@
 
 import UIKit
 
+// 判断系统
 let IOS7 = Int(UIDevice.current.systemVersion)! >= 7 ? true : false;
 let IOS8 = Int(UIDevice.current.systemVersion)! >= 8 ? true : false;
 let IOS9 = Int(UIDevice.current.systemVersion)! >= 9 ? true : false;
+let IOS11 = Int(UIDevice.current.systemVersion)! >= 11 ? true : false;
+
+// 判断设备
+func isX() -> Bool {
+    if UIScreen.main.bounds.height == 812 {
+        return true
+    }
+    return false
+}
 
 
 let LLSCREENW = UIScreen.main.bounds.width
@@ -46,4 +56,9 @@ func printLog<T>(_ message : T, file : String = #file, funcName : String = #func
         
     #endif
 }
+
+
+
+
+
 

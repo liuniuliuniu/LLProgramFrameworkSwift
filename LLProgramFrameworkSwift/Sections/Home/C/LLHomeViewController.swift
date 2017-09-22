@@ -18,14 +18,25 @@ class LLHomeViewController: LLBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        //MARK:NAV高度
+        let NAVMargin = isX() ? 88 : 64
+        //MARK:TABBAR高度
+        let TABBARMargin = isX() ? 34 : 0
         
-        let tabV = UITableView(frame: view.bounds, style: UITableViewStyle.plain)
+        let tabV = UITableView.init(frame: CGRect.init(x: 0, y: CGFloat(NAVMargin), width: LLSCREENW, height: LLSCREENH - CGFloat(NAVMargin + TABBARMargin)), style: UITableViewStyle.plain)
+        if #available(iOS 11.0, *) {
+            tabV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior(rawValue: 2)!
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        };
+        
+        
         view.addSubview(tabV)
         viewModel.tableV = tabV;
         viewModel.SetConfig()
         
         weak var weakself = self
-        
         tabV.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
             weakself?.viewModel.requestNewDataCommond.onNext(true)
         })
@@ -42,6 +53,10 @@ class LLHomeViewController: LLBaseViewController {
         
     }
 }
+
+
+
+
 
 
 
