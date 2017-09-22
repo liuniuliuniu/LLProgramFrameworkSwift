@@ -4,6 +4,10 @@
 
 ![LLProgramFramework.gif](https://github.com/liuniuliuniu/LLProgramFramework.Swift/blob/master/LLProgramFrameworkSwift.gif)
 
+
+####Update  9/22 Fix iOS 11 and iPhone X
+
+
 ###项目结构
 
 * General 工具类综合
