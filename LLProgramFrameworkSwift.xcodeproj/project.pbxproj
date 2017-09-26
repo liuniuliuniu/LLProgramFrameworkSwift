@@ -19,6 +19,7 @@
 		967889B11F61203C00CE63C5 /* LLToModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967889B01F61203C00CE63C5 /* LLToModelExtension.swift */; };
 		967889B81F615E4400CE63C5 /* LLHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967889B61F615E4400CE63C5 /* LLHomeCell.swift */; };
 		967889B91F615E4400CE63C5 /* LLHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967889B71F615E4400CE63C5 /* LLHomeCell.xib */; };
+		9682AF7E1F7A3FAD00FA7188 /* LLRequestPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9682AF7D1F7A3FAD00FA7188 /* LLRequestPlugin.swift */; };
 		96C7C3CF1F5E526800ED93DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C7C3CE1F5E526800ED93DC /* AppDelegate.swift */; };
 		96C7C3D41F5E526800ED93DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C7C3D21F5E526800ED93DC /* Main.storyboard */; };
 		96C7C3D61F5E526800ED93DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C7C3D51F5E526800ED93DC /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		967889B01F61203C00CE63C5 /* LLToModelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLToModelExtension.swift; sourceTree = "<group>"; };
 		967889B61F615E4400CE63C5 /* LLHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLHomeCell.swift; sourceTree = "<group>"; };
 		967889B71F615E4400CE63C5 /* LLHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLHomeCell.xib; sourceTree = "<group>"; };
+		9682AF7D1F7A3FAD00FA7188 /* LLRequestPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLRequestPlugin.swift; sourceTree = "<group>"; };
 		96C7C3CB1F5E526800ED93DC /* LLProgramFrameworkSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLProgramFrameworkSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C7C3CE1F5E526800ED93DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96C7C3D31F5E526800ED93DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -167,25 +169,25 @@
 			path = YTKKeyValueStore;
 			sourceTree = "<group>";
 		};
-		964C79631F74BBED00C3DB84 /* ConstumUI */ = {
+		9682AF7F1F7A659D00FA7188 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		9682AF801F7A65B900FA7188 /* ConstumUI */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ConstumUI;
 			sourceTree = "<group>";
 		};
-		964C79641F74BBF500C3DB84 /* UIKitAddition */ = {
+		9682AF811F7A65C200FA7188 /* UIKitAddition */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = UIKitAddition;
-			sourceTree = "<group>";
-		};
-		964C79651F74BC0900C3DB84 /* Macro */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Macro;
 			sourceTree = "<group>";
 		};
 		96C7C3C21F5E526800ED93DC = {
@@ -217,7 +219,7 @@
 				96C7C3FE1F5E65A900ED93DC /* Resources */,
 				96C7C3FF1F5E65AF00ED93DC /* Sections */,
 				96C7C4011F5E65B500ED93DC /* Service */,
-				964C79651F74BC0900C3DB84 /* Macro */,
+				9682AF7F1F7A659D00FA7188 /* Macro */,
 				96C7C4021F5E65BE00ED93DC /* Vendors */,
 				96C7C3CE1F5E526800ED93DC /* AppDelegate.swift */,
 				96C7C4141F5E76D400ED93DC /* pch.swift */,
@@ -251,10 +253,10 @@
 			isa = PBXGroup;
 			children = (
 				96C7C4051F5E742800ED93DC /* BaseClass */,
+				9682AF801F7A65B900FA7188 /* ConstumUI */,
 				96C7C4061F5E742800ED93DC /* Category */,
-				964C79631F74BBED00C3DB84 /* ConstumUI */,
+				9682AF811F7A65C200FA7188 /* UIKitAddition */,
 				96C7C40D1F5E742800ED93DC /* Helper */,
-				964C79641F74BBF500C3DB84 /* UIKitAddition */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -291,6 +293,7 @@
 			children = (
 				967889AA1F61064500CE63C5 /* APIManager.swift */,
 				967889B01F61203C00CE63C5 /* LLToModelExtension.swift */,
+				9682AF7D1F7A3FAD00FA7188 /* LLRequestPlugin.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				967889AB1F61064500CE63C5 /* APIManager.swift in Sources */,
 				8C4AB2B51F5EE4290082DC13 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				96C7C41F1F5E809B00ED93DC /* LLTabbarViewController.swift in Sources */,
+				9682AF7E1F7A3FAD00FA7188 /* LLRequestPlugin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

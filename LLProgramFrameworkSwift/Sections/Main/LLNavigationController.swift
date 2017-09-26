@@ -14,7 +14,7 @@ class LLNavigationController: UINavigationController ,UIGestureRecognizerDelegat
         super.viewDidLoad()
 
         interactivePopGestureRecognizer?.delegate = self
-        
+                
     }
 
 

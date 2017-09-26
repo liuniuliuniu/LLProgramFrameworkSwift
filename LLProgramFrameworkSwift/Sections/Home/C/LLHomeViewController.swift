@@ -23,8 +23,9 @@ class LLHomeViewController: LLBaseViewController {
         let NAVMargin = isX() ? 88 : 64
         //MARK:TABBAR高度
         let TABBARMargin = isX() ? 34 : 0
-        
+//
         let tabV = UITableView.init(frame: CGRect.init(x: 0, y: CGFloat(NAVMargin), width: LLSCREENW, height: LLSCREENH - CGFloat(NAVMargin + TABBARMargin)), style: UITableViewStyle.plain)
+        
         if #available(iOS 11.0, *) {
             tabV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior(rawValue: 2)!
         } else {

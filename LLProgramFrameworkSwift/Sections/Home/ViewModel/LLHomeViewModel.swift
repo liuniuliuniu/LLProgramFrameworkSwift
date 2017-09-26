@@ -10,7 +10,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Moya
+import Alamofire
 import MJRefresh
+
+let cellID = "LLHomeCellID"
+
 
 enum LLRefreshStatus {
     case none
@@ -21,23 +25,45 @@ enum LLRefreshStatus {
     case noMoreData
 }
 
-let cellID = "LLHomeCellID"
+
+public func defaultAlamofireManager() -> Manager {
+    
+    let configuration = URLSessionConfiguration.default
+    
+    configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
+    
+    let policies: [String: ServerTrustPolicy] = [
+        "ap.grtstar.cn": .disableEvaluation
+    ]
+    let manager = Alamofire.SessionManager(configuration: configuration,serverTrustPolicyManager: ServerTrustPolicyManager(policies: policies))
+    
+    manager.startRequestsImmediately = false
+    
+    return manager
+}
+
+
+private func endpointMapping<Target: TargetType>(target: Target) -> Endpoint<Target> {
+    
+    print("请求连接：\(target.baseURL)\(target.path) \n方法：\(target.method)\n参数：\(String(describing: target.parameters)) ")
+    
+    return MoyaProvider.defaultEndpointMapping(for: target)
+}
+
 
 typealias ClosureType = (Int) -> Void
 
 class LLHomeViewModel: NSObject {
     
-    
     var bag : DisposeBag = DisposeBag()
     
-    let provider = RxMoyaProvider<APIManager>()
-
+    let provider = RxMoyaProvider<APIManager>(endpointClosure: endpointMapping, manager: defaultAlamofireManager(), plugins: [LLRequestPlugin(),netWorkActivityPlugin])
+    
     var modelObserable = Variable<[StoryModel]> ([])
     
     var refreshStateObserable = Variable<LLRefreshStatus>(.none)
     
     let requestNewDataCommond =  PublishSubject<Bool>()
-    
     
     var pushCloure : ClosureType?
     
@@ -57,25 +83,23 @@ class LLHomeViewModel: NSObject {
         
         //MARK: Rx 绑定tableView数据
         modelObserable.asObservable().bind(to: tableV.rx.items(cellIdentifier: cellID, cellType: LLHomeCell.self)){ row , model , cell in
-            
             cell.titleLbl.text = model.title
-            
             cell.imageV?.kf.setImage(with: URL.init(string: (model.images?.count)! > 0 ? (model.images?.first)! : ""))
-            
             }.addDisposableTo(bag)
         
+
+        
         tableV.rx.itemSelected.subscribe(onNext: { (index : IndexPath) in
-            
             printLog("\(index.row)")
-            
         }).addDisposableTo(bag)
+        
         
         weak var weakSelf = self
         tableV.rx.modelSelected(StoryModel.self).subscribe(onNext: { (model : StoryModel) in
-                        
             weakSelf?.pushCloure!(model.id!)
-            
         }).addDisposableTo(bag)
+        
+        
         
         requestNewDataCommond.subscribe { (event : Event<Bool>) in
             
@@ -88,10 +112,9 @@ class LLHomeViewModel: NSObject {
                     .mapJSON().mapObject(type: LLHomeModel.self).subscribe(onNext: { (model) in
                         self.modelObserable.value = model.stories!
                         self.refreshStateObserable.value = .endHeaderRefresh
-                        LLProgressHUD.showSuccess("加载成功")
+
                     }, onError: { (error) in
                         self.refreshStateObserable.value = .endHeaderRefresh
-                        LLProgressHUD.showError("加载失败")
                     }).addDisposableTo(self.bag)
             }else{
                 //  假装请求第二页数据
@@ -100,12 +123,11 @@ class LLHomeViewModel: NSObject {
                     .request(.GetHomeList)
                     .filterSuccessfulStatusCodes()
                     .mapJSON().mapObject(type: LLHomeModel.self).subscribe(onNext: { (model) in
-                        LLProgressHUD.showSuccess("加载成功")
+
                         self.modelObserable.value += model.stories!
                         self.refreshStateObserable.value = self.pageIndex > 3 ? .noMoreData : .endFooterRefresh
                     }, onError: { (error) in
                         self.refreshStateObserable.value = .endFooterRefresh
-                        LLProgressHUD.showError("加载失败")
                     }).addDisposableTo(self.bag)
             
             }
