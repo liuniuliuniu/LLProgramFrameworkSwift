@@ -1,14 +1,16 @@
 # LLProgramFramework.Swift
 
-##本项目是一个拿来即用的Swift基础框架：框架结构如下，框架内部已经写了基于RXSwift的Demo 可以参考  具体使用可查看使用详情[RxSwift+Moya+ObjectMapper优雅的网络请求及模型转换](http://www.jianshu.com/p/0248e7104c39)
+
+## 本项目是一个拿来即用的Swift基础框架：框架结构如下，框架内部已经写了基于RXSwift的Demo 可以参考  具体使用可查看使用详情[RxSwift+Moya+ObjectMapper优雅的网络请求及模型转换](http://www.jianshu.com/p/0248e7104c39)
+
 
 ![LLProgramFramework.gif](https://github.com/liuniuliuniu/LLProgramFramework.Swift/blob/master/LLProgramFrameworkSwift.gif)
 
 
-####Update  9/22 Fix iOS 11 and iPhone X
+#### Update  9/22 Fix iOS 11 and iPhone X
+#### Update  9/26 加入 Plugin 插件 拦截全局的网络请求
 
-
-###项目结构
+### 项目结构
 
 * General 工具类综合
 	* Category ------分类
