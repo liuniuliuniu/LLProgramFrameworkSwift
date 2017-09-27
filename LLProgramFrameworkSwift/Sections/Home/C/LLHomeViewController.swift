@@ -16,43 +16,78 @@ class LLHomeViewController: LLBaseViewController {
         
     let viewModel = LLHomeViewModel()
     
+    var tableView = UITableView()
+    
+    var bag : DisposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        //MARK:NAV高度
-        let NAVMargin = isX() ? 88 : 64
-        //MARK:TABBAR高度
-        let TABBARMargin = isX() ? 34 : 0
-//
-        let tabV = UITableView.init(frame: CGRect.init(x: 0, y: CGFloat(NAVMargin), width: LLSCREENW, height: LLSCREENH - CGFloat(NAVMargin + TABBARMargin)), style: UITableViewStyle.plain)
+     
+        
+        setupUI()
+        
+        tableViewAction()
+        
+    }
+    
+    fileprivate  func setupUI() {
+    
+        tableView = UITableView.init(frame: CGRect.init(x: 0, y: CGFloat(NAVMargin), width: LLSCREENW, height: LLSCREENH - CGFloat(NAVMargin + TABBARMargin)), style: UITableViewStyle.plain)
+        
+        tableView.register(UINib.init(nibName: "LLHomeCell", bundle: nil), forCellReuseIdentifier: cellID)
+        
+        tableView.rowHeight = 80
+        
+        tableView.tableFooterView = UIView.init()
         
         if #available(iOS 11.0, *) {
-            tabV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior(rawValue: 2)!
+            tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior(rawValue: 2)!
         } else {
             self.automaticallyAdjustsScrollViewInsets = false
         };
         
+        view.addSubview(tableView)
         
-        view.addSubview(tabV)
-        viewModel.tableV = tabV;
+        viewModel.tableV = tableView
+        
         viewModel.SetConfig()
         
         weak var weakself = self
-        tabV.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
+        
+        tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
             weakself?.viewModel.requestNewDataCommond.onNext(true)
         })
         
-        tabV.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: { 
+        tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: {
             weakself?.viewModel.requestNewDataCommond.onNext(false)
         })
         
-        tabV.mj_header.beginRefreshing()
-                
-        viewModel.pushCloure = { ( id : Int) in
+        tableView.mj_header.beginRefreshing()        
+    }
+    
+    fileprivate func tableViewAction() {
+    
+        tableView.rx
+            .itemSelected
+            .subscribe(onNext: {
+                (index : IndexPath) in
+                printLog("\(index.row)")
+            })
+            .addDisposableTo(bag)
         
-        }
+        tableView.rx
+            .modelSelected(StoryModel.self)
+            .subscribe(
+                onNext:{
+                    value in
+                    printLog(value.title)
+            })
+            .addDisposableTo(bag)
         
     }
+    
+    
+    
 }
 
 

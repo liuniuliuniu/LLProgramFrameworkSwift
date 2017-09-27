@@ -25,10 +25,14 @@ func isX() -> Bool {
 
 let LLSCREENW = UIScreen.main.bounds.width
 let LLSCREENH = UIScreen.main.bounds.height
+//MARK:NAV高度
+let NAVMargin = isX() ? 88 : 64
+//MARK:TABBAR高度
+let TABBARMargin = isX() ? 83 : 49
 
 let LLTHEMECOLOR = UIColor.yellow
 
-// 随机颜色
+
 func LLRandomColor() -> UIColor{
     let r = CGFloat(arc4random()%256)
     let g = CGFloat(arc4random()%256)
@@ -36,7 +40,6 @@ func LLRandomColor() -> UIColor{
     return UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1)
 }
 
-// RGB 颜色值
 func RGBCOLOR(r:CGFloat,_ g:CGFloat,_ b:CGFloat) -> UIColor{
     return UIColor(red: (r)/255.0, green: (g)/255.0, blue: (b)/255.0, alpha: 1.0)
 }

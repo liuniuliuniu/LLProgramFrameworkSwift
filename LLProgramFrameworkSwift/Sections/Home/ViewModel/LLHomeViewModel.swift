@@ -51,8 +51,6 @@ private func endpointMapping<Target: TargetType>(target: Target) -> Endpoint<Tar
 }
 
 
-typealias ClosureType = (Int) -> Void
-
 class LLHomeViewModel: NSObject {
     
     var bag : DisposeBag = DisposeBag()
@@ -64,45 +62,25 @@ class LLHomeViewModel: NSObject {
     var refreshStateObserable = Variable<LLRefreshStatus>(.none)
     
     let requestNewDataCommond =  PublishSubject<Bool>()
-    
-    var pushCloure : ClosureType?
-    
+        
     var pageIndex = Int()
     
     var tableV = UITableView()
     
     func SetConfig() {
         
-        tableV.register(UINib.init(nibName: "LLHomeCell", bundle: nil), forCellReuseIdentifier: cellID)
-        
-        tableV.rowHeight = 80
-        
-        pageIndex = 0
-        
-        tableV.tableFooterView = UIView.init()
-        
         //MARK: Rx 绑定tableView数据
-        modelObserable.asObservable().bind(to: tableV.rx.items(cellIdentifier: cellID, cellType: LLHomeCell.self)){ row , model , cell in
+        modelObserable.asObservable()
+            .bind(to: tableV.rx.items(cellIdentifier: cellID, cellType: LLHomeCell.self)){ row , model , cell in
+                
             cell.titleLbl.text = model.title
             cell.imageV?.kf.setImage(with: URL.init(string: (model.images?.count)! > 0 ? (model.images?.first)! : ""))
-            }.addDisposableTo(bag)
-        
-
-        
-        tableV.rx.itemSelected.subscribe(onNext: { (index : IndexPath) in
-            printLog("\(index.row)")
-        }).addDisposableTo(bag)
-        
-        
-        weak var weakSelf = self
-        tableV.rx.modelSelected(StoryModel.self).subscribe(onNext: { (model : StoryModel) in
-            weakSelf?.pushCloure!(model.id!)
-        }).addDisposableTo(bag)
-        
+                
+            }
+            .addDisposableTo(bag)
         
         
         requestNewDataCommond.subscribe { (event : Event<Bool>) in
-            
             if event.element! {
                 // 假装在请求第一页
                 self.pageIndex = 0
